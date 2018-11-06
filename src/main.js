@@ -9,4 +9,4 @@ function sum() {
   return a + b + n + c;
 }
 
-sum()
+sum();
