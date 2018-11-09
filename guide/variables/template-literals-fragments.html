@@ -1,0 +1,41 @@
+<head>
+    <title>Template literals to Html Fragments in Js</title>
+</head>
+
+<body>
+
+</body>
+<script>
+  const article = {
+    title: 'Learn Template Strings',
+    intro: 'One short explain how to use template strings in ES6 on your code today.',
+    body: 'We are a community of motherfucking programmers who have been humiliated by software development methodologies for years. We are tired of XP, Scrum, Kanban, Waterfall, Software Craftsmanship (aka XP-Lite) and anything else getting in the way of...Programming, Motherfucker. We are tired of being told we´re socialy awkward idiots who need to be manipulated to work in a Forced Pair Programming chain gang without any time to be creative because none of the 10 managers on the project can do... Programming, Motherfucker. We must destroy these methodologies that get in the way of...Programming, Motherfucker.',
+    tags: ['es6', 'js', 'template-literal'],
+    author: ''
+  }
+
+  function renderAuthor(name) {
+    return (name) ? name : 'Unknown'
+  }
+
+  const markup = `
+    <article>
+      <header>
+        <h1>${article.title}</h1>
+      </header>
+      <section>
+        <p>${article.intro}</p>
+      </section>
+      <footer>
+        <ul>
+          ${article.tags.map((tag) => `<li>${tag}</li>`).join('')}
+        </ul>
+        <p>Author: ${renderAuthor(article.author)}</p>
+      </footer>
+    </article>
+    `
+
+    document.body.innerHTML = markup
+</script>
+
+</html>
