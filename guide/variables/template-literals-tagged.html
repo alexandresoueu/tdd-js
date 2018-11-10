@@ -1,0 +1,35 @@
+<head>
+    <title>Template literals to Html Fragments in Js</title>
+</head>
+<style>
+  .green {
+    color: green;
+    font-size: 25px;
+  }
+</style>
+<body>
+
+</body>
+<script>
+  const city = 'Dublin'
+  const something = 'Guiness'
+  const otherThing = 'Leprechaums'
+
+  function green(template, ...values) {
+    return template.reduce((accumulator, part, i) => {
+      console.log(accumulator, part)
+      return `
+      ${accumulator}
+      <span class="green">${values[i -1].toUpperCase()}</span>
+      ${part}
+      ` 
+
+    })
+  }
+
+  const ireland = green`I live in ${city} the city of ${something} and ${otherThing}`
+
+  document.body.innerHTML = ireland
+</script>
+
+</html>
