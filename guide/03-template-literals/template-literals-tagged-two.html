@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Template literals tagged Two in Js</title>
+</head>
+<style>
+        .green {
+          color: green;
+          font-size: 25px;
+        }
+      </style>
+<body>
+
+</body>
+<script>
+const something = 'Guiness'
+const otherThing = 'Leprechaums'
+const city = 'Dublin'
+
+const color = colorname => (template, ...values) => {
+  return template.reduce((accumulator, part, i) =>
+    `${accumulator} <span class="${colorname}">${values[i -1].toUpperCase()}</span>${part}`)
+}
+
+const green = color('green')
+
+const ireland = green`I live in ${city} the city of ${something} and ${otherThing}`
+
+console.log(ireland)
+document.body.innerHTML = ireland
+</script>
+</html>

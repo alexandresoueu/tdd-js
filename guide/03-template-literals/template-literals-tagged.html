@@ -1,5 +1,8 @@
+<!DOCTYPE html>
+<html>
+
 <head>
-    <title>Template literals to Html Fragments in Js</title>
+    <title>Template literals tagged in Js</title>
 </head>
 <style>
   .green {
@@ -17,7 +20,7 @@
 
   function green(template, ...values) {
     return template.reduce((accumulator, part, i) => {
-      console.log(accumulator, part)
+      console.log(values)
       return `
       ${accumulator}
       <span class="green">${values[i -1].toUpperCase()}</span>

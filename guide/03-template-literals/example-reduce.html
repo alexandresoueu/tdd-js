@@ -1,0 +1,18 @@
+<script>
+let contador = 0
+
+function somar(x, y, ...outros) {
+    contador++
+    console.log(`EXECUÇÃO NÚMERO ${contador}`)
+    console.log('x =', x)
+    console.log('y =',y)
+    console.log('outros =', outros)
+    return x + y
+}
+
+const lista = [1, 2, 9]
+const resultado = lista.reduce(somar, 0)
+
+console.log('...\nresultado =', resultado)
+console.log(lista)
+</script>
