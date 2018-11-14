@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Methods to strings two in Js</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    const nome = 'Marcus Ortense'
+
+    function main() {
+        console.log(nome.length)
+        const search = 'Ortense'
+        const r = nome.endsWith(search)
+
+        console.log(r)
+
+        for (let index = 1; index <= 14; index++) {
+            console.log('quando len é', index, 'esta procurando em:', nome.substring(index - search.length, index))
+        }
+
+    }
+
+    main()
+</script>
+
+</html>

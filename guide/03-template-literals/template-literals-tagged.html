@@ -20,7 +20,7 @@
 
   function green(template, ...values) {
     return template.reduce((accumulator, part, i) => {
-      console.log(values)
+      console.log(accumulator, part)
       return `
       ${accumulator}
       <span class="green">${values[i -1].toUpperCase()}</span>
