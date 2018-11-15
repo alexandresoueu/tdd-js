@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Array from in Js</title>
+</head>
+
+<body>
+  <ul id="list">
+    <li>Alexandre</li>
+    <li>Jaime</li>
+    <li>Nemo</li>
+  </ul>
+</body>
+<script>
+  //const text = 'Alexandre'
+  //console.log(Array.from(text))
+
+  const list = document.querySelectorAll('#list li')
+  //console.log(list)
+
+  const listArray = Array.from(list)
+  //console.log(listArray)
+
+  const names = listArray.map(name => name.textContent)
+  console.log(names)
+</script>
+
+</html>
