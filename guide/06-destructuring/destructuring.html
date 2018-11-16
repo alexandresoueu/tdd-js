@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Destructuring in Js</title>
+</head>
+
+<body>
+</body>
+<script>
+  var data = {
+    name: 'Alexandre',
+    surname: 'Oliveira',
+    age:  26,
+    blog: 'https://alexandre-oliveira.esy.es',
+    social: {
+      twitter: 'chapolinsoueu',
+      facebook: '/alexandresoueu'
+    }
+  }
+
+//Without use Destructuting
+  // const name = data.name
+  // const surname = data.surname
+  // const twitter = data.social.twitter
+
+  // console.log(name)
+  // console.log(surname)
+  // console.log(twitter)
+
+// With use Destructuring
+
+  const {name, surname} = data
+  console.log(name, surname)
+
+  const {twitter, facebook} = data.social
+  console.log(twitter, facebook)
+
+  const {twitter: tw} = data.social
+  console.log(tw) 
+
+  const {person = 'Nemo'} = data
+  console.log(person)
+
+</script>
+
+</html>
