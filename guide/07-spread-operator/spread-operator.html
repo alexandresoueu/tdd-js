@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Spread Operator in Js</title>
+</head>
+
+<body>
+</body>
+<script>
+  let front = ['React', 'Angular', 'Vue']
+  let back = ['NodeJs', 'Python', 'Ruby']
+
+  // let fullstack = front.concat(back)
+  // console.log(fullstack)
+
+  let fullstack = []
+  fullstack = fullstack.concat(front)
+  fullstack.push('RxJs')
+  fullstack = fullstack.concat(back)
+  console.log(fullstack) 
+
+  let fullstackaum = [...front, 'RxJs', ...back]
+  console.log(fullstackaum)
+
+  // console.log([...'alexandre'])
+  // console.log(...'jorginho')
+  // console.log(front)
+  // console.log(...front)
+
+</script>
+
+</html>
