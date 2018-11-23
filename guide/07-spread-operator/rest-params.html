@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Rest params in Js</title>
+</head>
+
+<body>
+</body>
+<script>
+  function multiply(mult, arg1, arg2, arg3) {
+    let arr = []
+    arr.push(mult * arg1)
+    arr.push(mult * arg2)
+    arr.push(mult * arg3)
+    return arr
+  }
+
+  function multiplyzaum(multinho, ...args) {
+    return args.map(args => args * multinho)
+  }
+
+  console.log(multiplyzaum(5, 1, 2, 3, 4, 5, 6))
+  
+</script>
+
+</html>
