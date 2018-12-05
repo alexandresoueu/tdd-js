@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Symbols Intro</title>
+</head>
+
+<body>
+</body>
+<script>
+//Array, String, Symbol
+
+    let foo = Symbol('name')
+    let nemo = Symbol('name')
+
+    //console.log(foo === nemo) FALSE 
+
+    let obj = {
+        [Symbol('name')]: 'Alexandre',
+        [Symbol('age')]: 26,
+        city: 'São Paulo'
+    }
+
+    //console.log(Object.keys(obj)) return only city
+
+    const symbols = Object.getOwnPropertySymbols(obj)
+    const data = symbols.map(sym => obj[sym])
+
+    console.log(data)
+
+</script>
+
+</html>
