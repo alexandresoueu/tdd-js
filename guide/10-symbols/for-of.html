@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>for of Intro</title>
+</head>
+
+<body>
+</body>
+<script>
+  //iterators
+  //iterable
+
+  var txt = 'Ireland' // iterable
+  var iterataum = txt[Symbol.iterator]() // iterator
+
+  // console.log(iterataum.next()) //false
+  // console.log(iterataum.next()) //false
+  // console.log(iterataum.next()) //false
+  // console.log(iterataum.next()) //false
+  // console.log(iterataum.next()) //false
+  // console.log(iterataum.next()) //false
+  // console.log(iterataum.next()) //false
+  // console.log(iterataum.next()) //true
+
+  for(letter of txt) {
+    console.log(letter)
+    if(letter === 'a') {
+      break
+    }
+  }
+</script>
+
+</html>
