@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Generators Intro</title>
+</head>
+
+<body>
+</body>
+<script>
+    function* genNames() {
+        console.log('Primeira passagem')
+        yield 'Alexandre'
+        console.log('Segunda passagem')
+        yield 'Joao'
+        console.log('Terceira passagem')
+        yield 'Gabriel'
+    }
+
+    const names = genNames()
+
+    console.log(names.next())
+    console.log(names.next())
+    console.log(names.next())
+</script>
+
+</html>
