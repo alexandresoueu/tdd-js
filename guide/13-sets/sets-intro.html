@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Sets Intro</title>
+</head>
+
+<body>
+</body>
+<script>
+  let mySet = new Set(['Alexandre', 'Bianca', 'Zaira'])
+
+  mySet.add('nemo')
+  mySet.add('nemo')
+  mySet.add('nemo')
+  mySet.add('daddy of nemo')
+  mySet.add('Pumba')
+
+  mySet.delete('Pumba')
+
+  console.log('Has Pumba? ',mySet.has('Pumba'))
+  console.log('Has nemo? ',mySet.has('nemo'))
+
+  console.log(mySet[1])
+
+  let iterator = mySet.values()
+
+  for(name of iterator) {
+    console.log(name)
+  }
+</script>
+
+</html>
