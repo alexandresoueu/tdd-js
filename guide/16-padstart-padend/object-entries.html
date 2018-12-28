@@ -2,11 +2,11 @@
 <html>
 
 <head>
-    <title>Object entries</title>
+    <title>Object entries and values</title>
 </head>
 
 <body>
-  <h1>OBJECT ENTRIES</h1>
+  <h1>OBJECT ENTRIES AND VALUES</h1>
 </body>
 <script>
   const animals = {
@@ -25,6 +25,8 @@
   console.log(animalsMap.has('camel'))
   console.log(animalsMap.has('lion'))
   console.log(animalsMap.get('alpaca'))
+
+  console.log('Object Values',Object.values(animals).reduce((a,b) => a+b))
 </script>
 
 </html>
