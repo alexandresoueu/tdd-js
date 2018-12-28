@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Object entries</title>
+</head>
+
+<body>
+  <h1>OBJECT ENTRIES</h1>
+</body>
+<script>
+  const animals = {
+    camel: 3,
+    llama: 2,
+    alpaca: 5
+  }
+
+  //console.log(Object.entries(animals))
+
+  const animalsMap = new Map(Object.entries(animals)) // new way have a key and value
+
+  console.log(Object.keys(animals)) // old way but only keys don't have value
+
+  console.log(animalsMap.size)
+  console.log(animalsMap.has('camel'))
+  console.log(animalsMap.has('lion'))
+  console.log(animalsMap.get('alpaca'))
+</script>
+
+</html>
