@@ -63,11 +63,51 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 1);
+/******/ 	return __webpack_require__(__webpack_require__.s = 2);
 /******/ })
 /************************************************************************/
 /******/ ([
 /* 0 */
+/***/ function(module, exports, __webpack_require__) {
+
+"use strict";
+/* harmony export (immutable) */ exports["b"] = sub;
+/* harmony export (binding) */ __webpack_require__.d(exports, "c", function() { return mult; });
+/* harmony export (binding) */ __webpack_require__.d(exports, "d", function() { return div; });
+/* harmony export (binding) */ __webpack_require__.d(exports, "e", function() { return PI; });
+function sum(a, b) {
+  return a + b;
+}
+
+//named export
+//have to various exports into one file
+//same file
+//only can called to the same to name
+//import needs to the keys { sub }
+function sub(a, b) {
+  return a - b;
+}
+
+function mult(a, b) {
+  return a * b;
+}
+
+function div(a, b) {
+  return a / b;
+}
+
+var PI = 3.14;
+
+
+
+//method default
+//only one default per file
+//import with qq name
+//don't need util the keys
+/* harmony default export */ exports["a"] = sum;
+
+/***/ },
+/* 1 */
 /***/ function(module, exports, __webpack_require__) {
 
 //  Ramda v0.22.1
@@ -8904,13 +8944,16 @@
 
 
 /***/ },
-/* 1 */
+/* 2 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_ramda__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_ramda__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_ramda___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_ramda__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__utils__ = __webpack_require__(0);
+
+
 
 
 var arr1 = [1, 1, 1, 2, 2, 3, 4, 5, 6, 6];
@@ -8919,8 +8962,15 @@ var arr2 = [5, 6, 6, 6, 7, 7, 8, 9, 10, 1];
 var arr3 = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_ramda__["union"])(arr1, arr2);
 
 var arr4 = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_ramda__["uniq"])(arr1);
+
 console.log('Union is working', arr3);
 console.log('Uniq is working', arr4);
+
+console.log('module export default', __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__utils__["a" /* default */])(2, 4));
+console.log('module export function', __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__utils__["b" /* sub */])(2, 4));
+console.log('module export above function', __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__utils__["c" /* multiplication */])(2, 4));
+console.log('module export above function together', __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__utils__["d" /* div */])(2, 4));
+console.log('module export Variable', __WEBPACK_IMPORTED_MODULE_1__utils__["e" /* PI */]);
 
 /***/ }
 /******/ ]);
