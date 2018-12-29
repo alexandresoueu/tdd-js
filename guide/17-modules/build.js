@@ -8916,9 +8916,11 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var arr1 = [1, 1, 1, 2, 2, 3, 4, 5, 6, 6];
 var arr2 = [5, 6, 6, 6, 7, 7, 8, 9, 10, 1];
 
-var arr3 = __WEBPACK_IMPORTED_MODULE_0_ramda__["union"](arr1, arr2);
+var arr3 = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_ramda__["union"])(arr1, arr2);
 
-console.log(arr3);
+var arr4 = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_ramda__["uniq"])(arr1);
+console.log('Union is working', arr3);
+console.log('Uniq is working', arr4);
 
 /***/ }
 /******/ ]);
