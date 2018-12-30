@@ -17,6 +17,8 @@
     "webpack": "^2.2.0-rc.2"
   },
   "dependencies": {
-    "ramda": "^0.22.1"
+    "ramda": "^0.22.1",
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0"
   }
 }
