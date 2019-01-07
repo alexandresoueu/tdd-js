@@ -1,32 +1,26 @@
 describe('Main', function() {
-  describe('Method A', function() {
-    context('Case One', function() {
-      it('Should happen ...', function() {
-        
-      })
-      
-      it.skip('Should happen One...', function() {
-        
-        throw new Error('just an error')
-      })
-
-      it('Should happen Two ...', function() {
-        
-      })
-    })
-
-    context('Case Two', function() {
-      it('Should happen Bubba...', function() {
-        
-        throw new Error('just an error on the code.')
-      })
-
-      it('Should happen Bubba noob...', function() {
-        
-      })
-    })
+  
+  before(function() {
+    console.log('before')
   })
-  describe('Method B', function() {
+  
+  after(function() {
+    console.log('after')
+  })
 
+  beforeEach(function() {
+    console.log('beforeEach')
+  })
+
+  afterEach(function()  {
+    console.log('afterEach')
+  })
+
+  it('test One', function() {
+    console.log('running test One')
+  })
+
+  it('test Two', function() {
+    console.log('running test Two')
   })
 })
