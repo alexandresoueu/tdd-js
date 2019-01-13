@@ -1,61 +1,22 @@
 import { expect } from 'chai'
-import { sum, sub, div, mult } from '../src/main.js'
+import FizzBuzz from '../src/main'
 
-describe('Main Js', () => {
-  //smoke tests
-  describe('Smoke tests calculator', () => {
-
-    it('Should exist the method SUM', () => {
-      expect(sum).to.exist
-      expect(sum).to.be.a('function')
-    })
-
-    it('Should exist the method SUB', () => {
-      expect(sub).to.exist
-      expect(sub).to.be.a('function')
-    })
-
-    it('Should exist the method MULT', () => {
-      expect(mult).to.exist
-      expect(mult).to.be.a('function')
-    })
-
-    it('Should exist the method DIV', () => {
-      expect(div).to.exist
-      expect(div).to.be.a('function')
-    })
+describe.only('Main', () => {
+  
+  it('Should return FIZZ when multiple of 3', () => {
+    expect(FizzBuzz(3)).to.be.equal('Fizz')
+    expect(FizzBuzz(6)).to.be.equal('Fizz')
   })
 
-  describe('SUM', () => {
-    it('Shoul return 4 when SUM(2,2)', () => {
-      expect(sum(2, 2)).to.be.equal(4)
-    })
+  it('Should return BUZZ when multiple of 5', () => {
+    expect(FizzBuzz(5)).to.be.equal('Buzz')
   })
 
-  describe('SUB', () => {
-    it('Should return 3 when SUB(10,7)', () => {
-      expect(sub(10, 7)).to.be.equal(3)
-    })
-
-    it('Shoul return -3 when SUB(12, 9)', () => {
-      expect(sub(9, 12)).to.be.equal(-3)
-    })
+  it('Shoul return FIZZBUZZ when multiple of 3 and 5', () => {
+    expect(FizzBuzz(15)).to.be.equal('FizzBuzz')
   })
 
-  describe('MULT', () => {
-    it('Should return 10 when MULT(5,2)', () => {
-      expect(mult(5, 2)).to.be.equal(10)
-    })
-  })
-
-  describe('DIV', () => {
-    it('Should return 1 when DIV(15, 15)', () => {
-      expect(div(15, 15)).to.be.equal(1)
-    })
-
-    it('Should return ´Do not divide by zero!´ when divide by zero', () => {
-      expect(div(3, 0)).to.be.equal('Do not divide by zero!')
-    })
-
+  it('Should return the number when non-multiple', () => {
+    expect(FizzBuzz(7)).to.be.equal(7)
   })
 })
