@@ -1,43 +1,26 @@
-var expect = require('chai').expect
+import { expect } from 'chai'
+import FizzBuzz from '../src/main'
 
-describe('Main', function() {
-  var arr
-  before(function() {
-    
-  })
+describe('Main', () => {
   
-  after(function() {
-    
+  it('Should return 0 when the number is 0', () => {
+    expect(FizzBuzz(0)).to.be.equal(0)
   })
 
-  beforeEach(function() {
-    arr = [1, 2, 3]
+  it('Should return FIZZ when multiple of 3', () => {
+    expect(FizzBuzz(3)).to.be.equal('Fizz')
+    expect(FizzBuzz(6)).to.be.equal('Fizz')
   })
 
-  afterEach(function()  {
-    
+  it('Should return BUZZ when multiple of 5', () => {
+    expect(FizzBuzz(5)).to.be.equal('Buzz')
   })
 
-  it('should be an array', function() {
-    expect(arr).to.be.an('array')
+  it('Shoul return FIZZBUZZ when multiple of 3 and 5', () => {
+    expect(FizzBuzz(15)).to.be.equal('FizzBuzz')
   })
 
-  it('should have a size of 4 when push another value to the array', function() {
-    arr.push(4)
-    expect(arr).to.have.length(4)
-  })
-
-  it('should return true when pop 3 from the array', function() {
-    expect(arr.pop() === 3).to.be.true
-  })
-
-  it('should have a size of 2 when pop a value from the array', function() {
-    arr.pop()
-    expect(arr).to.have.length(2)
-  })
-
-  it('should remove a value 3 when use pop in the array', function() {
-    arr.pop()
-    expect(arr).to.not.include(3)
+  it('Should return the number when non-multiple', () => {
+    expect(FizzBuzz(7)).to.be.equal(7)
   })
 })
