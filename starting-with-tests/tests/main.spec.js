@@ -1,8 +1,12 @@
 import { expect } from 'chai'
 import FizzBuzz from '../src/main'
 
-describe.only('Main', () => {
+describe('Main', () => {
   
+  it('Should return 0 when the number is 0', () => {
+    expect(FizzBuzz(0)).to.be.equal(0)
+  })
+
   it('Should return FIZZ when multiple of 3', () => {
     expect(FizzBuzz(3)).to.be.equal('Fizz')
     expect(FizzBuzz(6)).to.be.equal('Fizz')
