@@ -1,6 +1,6 @@
-# Project Title
+# Starting with tests
 
-One Paragraph of project description goes here
+Tests with mocha and chai on JS
 
 ## Getting Started
 
